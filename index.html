@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html ng-app="ep10App">
+<head>
+  <meta charset="utf-8">
+  <title>Minicurso Angular JS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+ <!-- ANGULAR JS -->
+  <script data-require="angular.js@1.2.x" type="text/javascript" src="js/angular-locale_pt-br.js"></script>
+  <script data-require="angular.js@1.2.x" type="text/javascript" src="js/angular.min.js"></script>
+  <script data-require="angular.js@1.2.x" type="text/javascript" src="js/angular-route.min.js"></script>
+  <script data-require="angular.js@1.2.x" type="text/javascript" src="js/angular-resource.min.js"></script>
+  <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+  
+
+    <!-- APLICATION -->
+  <script>document.write('<base href="' + document.location + '" />');</script>
+  <script src="app.js"></script>
+  <script src="controller/controllerEp10.js"></script>
+  <script src="service/serviceEp10.js"></script>
+
+  <!-- STYLE -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/apple-touch-icon-144-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/apple-touch-icon-114-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/apple-touch-icon-72-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" href="img/apple-touch-icon-57-precomposed.png">
+  <link rel="shortcut icon" href="img/favicon.png">
+  
+	<!--script type="text/javascript" src="js/jquery.min.js"></script-->
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/scripts.js"></script>
+</head>
+
+<body ng-controller="controllerEp10">
+<nav class="navbar navbar-default navbar-fixed-top navbar-inverse" role="navigation"></nav>
+
+<div class="container" s>
+	<!-- <div class="row clearfix" style="margin-top:50px; margin-bottom:50px"> -->
+	<div class="row clearfix div-interna">
+		<div class="col-md-12 column">
+			<div class="page-header">
+				<h1>GERENCIADOR DE MAPAS <small>AngularJS</small></h1>
+			</div>
+			<div class="alert alert-dismissable alert-success">
+				 <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+			</div>
+			<div class="alert alert-dismissable alert-warning">
+				 <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+			</div>
+
+			<div class="jumbotron">
+				<ng-view/>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+<nav class="navbar navbar-default navbar-inverse navbar-fixed-bottom" role="navigation"></nav>
+</body>
+</html>

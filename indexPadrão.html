@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html ng-app="ep10App">
+<head>
+  <meta charset="utf-8" />
+  <title>Minicurso Angular JS - CESJF</title>
+  
+  <!-- ANGULAR JS -->
+  <script data-require="angular.js@1.2.x" type="text/javascript" src="js/angular-locale_pt-br.js"></script>
+  <script data-require="angular.js@1.2.x" type="text/javascript" src="js/angular.min.js"></script>
+  <script data-require="angular.js@1.2.x" type="text/javascript" src="js/angular-route.min.js"></script>
+  <script data-require="angular.js@1.2.x" type="text/javascript" src="js/angular-resource.min.js"></script>
+  <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+  
+  <!-- STYLE -->
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">  
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css">
+  <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+
+  <!-- APLICATION -->
+  <script>document.write('<base href="' + document.location + '" />');</script>
+  <script src="app.js"></script>
+  <script src="controller/controllerEp10.js"></script>
+  <script src="service/serviceEp10.js"></script>
+
+</head> 
+
+<body ng-controller="controllerEp10">
+  <div class="container theme-showcase">
+    <h1>Estados e capitais</h1>    
+    <ng-view/>    
+  </div>
+</body>
+
+</html>
