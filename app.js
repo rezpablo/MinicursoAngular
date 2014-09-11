@@ -6,9 +6,9 @@ $app.config(['$routeProvider',
       when('/states', { templateUrl: 'list.html', controller: 'controllerEp10'}).
       when('/create', { templateUrl: 'create.html', controller: 'controllerEp10'}).
       when('/delete', { templateUrl: 'list.html', controller: 'controllerEp10'}).
-      /*when('/lista', { templateUrl: 'lista.html', controller: 'controllerEp10'}).
-      when('/cadastro', { templateUrl: 'cadastro.html', controller: 'controllerEp10'}).
-      when('/mapa', { templateUrl: 'mapa.html', controller: 'controllerEp10'}).*/
+      /*when('/lista', { templateUrl: 'view/lista.html', controller: 'controllerEp10'}).
+      when('/cadastro', { templateUrl: 'view/cadastro.html', controller: 'controllerEp10'}).
+      when('/mapa', { templateUrl: 'view/mapa.html', controller: 'controllerEp10'}).*/
       otherwise({
         redirectTo: '/states'
         /*redirectTo: '/lista'*/
