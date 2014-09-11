@@ -3,15 +3,15 @@ $app = angular.module('ep10App', ['ngRoute']);
 $app.config(['$routeProvider',
   function($routeProvider) {
     $routeProvider.
-      /*when('/states', { templateUrl: 'list.html', controller: 'controllerEp10'}).
+      when('/states', { templateUrl: 'list.html', controller: 'controllerEp10'}).
       when('/create', { templateUrl: 'create.html', controller: 'controllerEp10'}).
-      when('/delete', { templateUrl: 'list.html', controller: 'controllerEp10'}).*/
-      when('/lista', { templateUrl: 'lista.html', controller: 'controllerEp10'}).
+      when('/delete', { templateUrl: 'list.html', controller: 'controllerEp10'}).
+      /*when('/lista', { templateUrl: 'lista.html', controller: 'controllerEp10'}).
       when('/cadastro', { templateUrl: 'cadastro.html', controller: 'controllerEp10'}).
-      when('/mapa', { templateUrl: 'mapa.html', controller: 'controllerEp10'}).
+      when('/mapa', { templateUrl: 'mapa.html', controller: 'controllerEp10'}).*/
       otherwise({
-        /*redirectTo: '/states'*/
-        redirectTo: '/lista'
+        redirectTo: '/states'
+        /*redirectTo: '/lista'*/
       });
   }
 ]);
