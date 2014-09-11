@@ -1,4 +1,4 @@
-$app.service('statesService', function($http, $rootScope) {
+$app.service('pessoaService', function($http, $rootScope) {
   
   this.getToday = function(){
     return new Date();

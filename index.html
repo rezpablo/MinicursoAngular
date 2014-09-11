@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html ng-app="ep10App">
+<html ng-app="app">
+<!-- ep10App -->
 <head>
   <meta charset="utf-8">
   <title>Minicurso Angular JS</title>
@@ -17,9 +18,9 @@
 
     <!-- APLICATION -->
   <script>document.write('<base href="' + document.location + '" />');</script>
-  <script src="app.js"></script>
-  <script src="controller/controllerEp10.js"></script>
-  <script src="service/serviceEp10.js"></script>
+  <script src="app.js"></script>  
+  <script src="controller/pessoaController.js"></script>
+  <script src="service/pessoaService.js"></script>
 
   <!-- STYLE -->
 	<link href="css/bootstrap.min.css" rel="stylesheet">
@@ -35,15 +36,14 @@
 	<script type="text/javascript" src="js/scripts.js"></script>
 </head>
 
-<body ng-controller="controllerEp10">
+<body ng-controller="pessoaController">
 <nav class="navbar navbar-default navbar-fixed-top navbar-inverse" role="navigation"></nav>
 
-<div class="container" s>
-	<!-- <div class="row clearfix" style="margin-top:50px; margin-bottom:50px"> -->
+<div class="container">	
 	<div class="row clearfix div-interna">
 		<div class="col-md-12 column">
 			<div class="page-header">
-				<h1>GERENCIADOR DE MAPAS <small>AngularJS</small></h1>
+				<h1>GERENCIADOR DE AGENDA <small>AngularJS</small></h1>
 			</div>
 			<div class="alert alert-dismissable alert-success">
 				 <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>

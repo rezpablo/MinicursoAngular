@@ -1,4 +1,36 @@
-<form role="form" class="form-inline">
+
+<ul>
+  <li><a href="#create">Incluir novo estado</a></li>
+</ul>
+<p>Data: {{ today | date}}</p>    
+<p>Filtrar: <input type="text" ng-model="filtro" /></p>
+
+
+
+<ul class="list-group">
+  <li class="list-group-item" ng-repeat="state in states | orderBy:'name' | filter:filtro">
+  {{state.name | uppercase}} - {{state.capital | lowercase}} - renda per capita: {{state.renda | currency}} <a ng-click="deleteState($index)">[REMOVER]</a>
+  </li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <form role="form" class="form-inline">
 				<div class="form-group">
 					 <label for="exampleInputEmail1">Email address</label><input type="email" class="form-control" id="exampleInputEmail1">
 				</div>
@@ -104,4 +136,4 @@
 						</td>
 					</tr>
 				</tbody>
-			</table>
+			</table> -->
