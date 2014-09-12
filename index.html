@@ -39,10 +39,9 @@
 <body ng-controller="pessoaController">
 <nav class="navbar navbar-default navbar-fixed-top navbar-inverse" role="navigation">
 	<ul class="nav nav-pills pills">		
-		<li><a href="#agenda">Agenda</a></li>
-		<li><a href="#cadastro">Cadastrar</a></li>
+		<li><a href="#agenda" ng-click="limparMensagens()">Agenda</a></li>
+		<li><a href="#cadastro" ng-click="limparMensagens()">Cadastrar</a></li>
 	</ul>	
-	
 </nav>
 
 <div class="container">	
@@ -51,17 +50,17 @@
 			<div class="page-header">
 				<h1>GERENCIADOR DE AGENDA <small>AngularJS</small></h1>
 			</div>
-			<div class="alert alert-dismissable alert-success">
-				 <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+			<div class="alert alert-dismissable alert-success" ng-show="msgIncluido">
+				</h4>Usuário {{nomePessoa}} <strong>incluido </strong>com sucesso!!				 
 			</div>
-			<div class="alert alert-dismissable alert-warning">
-				 <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+			<div class="alert alert-dismissable alert-warning" ng-show="msgExcluido">
+				</h4>Usuário {{nomePessoa}} <strong>Excluido</strong> com sucesso!!
 			</div>
-
 			<div class="jumbotron">
+			
 				<ng-view/>
+				
 			</div>
-
 		</div>
 	</div>
 </div>
