@@ -2,3 +2,12 @@
   margin-top:50px; 
   margin-bottom:50px;
 }
+
+.pills{
+	padding-left: 70px; 
+	padding-top: 4px;
+}
+
+.pills > li > a:hover, .nav > li > a:focus {
+    background-color: #2a2828;
+}

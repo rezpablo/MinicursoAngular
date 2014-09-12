@@ -3,22 +3,19 @@ $app.controller('pessoaController', function($scope, $location, pessoaService) {
   $scope.filtro = "";
   
   $scope.today = pessoaService.getToday();
-
-  $scope.addState = function() {
-	  pessoaService.addStateIntoCollection($scope.estado, $scope.capital, 1000); 
-    $location.path('#states');
+  
+  $scope.adicioanarPessoa = function() {
+	  pessoaService.adicionarPessoa($scope.nome, $scope.telefone, $scope.endereco); 
+    $location.path('#agenda');
   };
-
-  $scope.deleteState = function(index) {
-	  pessoaService.removeStateFromCollection(index); 
-    $location.path('#states');
+ 
+  $scope.removerPessoa = function(index) {
+	  pessoaService.removerPessoa(index);	  
+	  $location.path('#agenda');
   };
-
+  
 });
 
 $app.run ( function($rootScope, pessoaService) {
-	 pessoaService.getStates(function(data){
-	    $rootScope.states = data;
-	  });
-	  
-	});
+	$rootScope.pessoas = pessoaService.getPessoas();	  
+});
