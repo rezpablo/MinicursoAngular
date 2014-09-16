@@ -1,0 +1,18 @@
+<div ng-controller="questaoController">
+	<form ng-submit="adicionarQuestao()">
+	  <div class="form-group">
+		<label>Pergunta</label>
+			<input type="text" class="form-control" ng-model="descricao">
+		<label>Alternativa 1</label>
+			<input type="text" class="form-control" ng-model="alternativa1">
+		<label>Alternativa 2</label>
+			<input type="text" class="form-control" ng-model="alternativa2">	
+		<label>Alternativa 3</label>
+			<input type="text" class="form-control" ng-model="alternativa3">
+		<label>Alternativa 4</label>
+			<input type="text" class="form-control" ng-model="alternativa4">		 	
+		<input class="btn btn-default" type="submit" value="Incluir" />		 	
+		<a class="btn btn-ttc" ng-click="limparMensagens()" href="#/questoes" >Cancelar</a>
+	  </div>
+	</form>
+</div>

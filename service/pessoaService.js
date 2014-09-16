@@ -31,11 +31,9 @@ $app.service('pessoaService', function($http, $rootScope) {
       data: this.getToday()
     });
     $rootScope.msgIncluido = true;
-    $rootScope.nomePessoa = nome;
   };
 
-  this.removerPessoa = function(index){	
-	$rootScope.nomePessoa = pessoas[index].nome;
+  this.removerPessoa = function(index){
 	$rootScope.pessoas.splice(index, 1);
 	$rootScope.msgExcluido = true;	
 	$rootScope.msgIncluido = false;	
