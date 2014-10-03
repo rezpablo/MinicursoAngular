@@ -1,7 +1,13 @@
-$app.controller('questaoController', function($scope, $location, questaoService, utilService) {	
+$app.controller('questaoController', function($rootScope, $scope, $location, questaoService, utilService) {	
+
+	var init = function(){			
+		utilService.getToday();
+		$scope.questoes = questaoService.getQuestoes();
+	}
+	init();
 
 	$scope.adicionarQuestao = function() {
-		questaoService.adicionarQuestao($scope.descricao, $scope.alternativa1, $scope.alternativa2, $scope.alternativa3, $scope.alternativa4);	  
+		questaoService.adicionarQuestao($scope.pergunta, $scope.alternativa1, $scope.alternativa2, $scope.alternativa3, $scope.alternativa4, $scope.resposta);	  
 		utilService.incluirMensagemIncluido();
 		$location.path('/questoes');
 	  };
@@ -13,11 +19,6 @@ $app.controller('questaoController', function($scope, $location, questaoService,
 	  };
 	  
 	  $scope.limparMensagens = function() {
-		  utilService.limparMensagens();   
+		utilService.limparMensagens();
 	  };
-	
-});
-
-$app.run ( function($rootScope, questaoService) {
-	$rootScope.questoes = questaoService.getQuestoes();
 });

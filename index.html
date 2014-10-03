@@ -1,26 +1,19 @@
 <!DOCTYPE html>
 <html ng-app="app">
-<!-- ep10App -->
 <head>
   <meta charset="utf-8">
   <title>Minicurso Angular JS</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="">
-  <meta name="author" content="">
-
- <!-- ANGULAR JS -->
-  <script data-require="angular.js@1.2.x" type="text/javascript" src="js/angular-locale_pt-br.js"></script>
-  <script data-require="angular.js@1.2.x" type="text/javascript" src="js/angular.min.js"></script>
-  <script data-require="angular.js@1.2.x" type="text/javascript" src="js/angular-route.min.js"></script>
-  <script data-require="angular.js@1.2.x" type="text/javascript" src="js/angular-resource.min.js"></script>
-  <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
   
+ <!-- ANGULAR JS, boa pratica importar o angular 1-->  
+  <script type="text/javascript" src="js/angular.min.js"></script>
+  <script type="text/javascript" src="js/angular-route.min.js"></script>
+  <script type="text/javascript" src="js/angular-resource.min.js"></script>
+  <script type="text/javascript" src="js/angular-locale_pt-br.js"></script>
+  <!--script type="text/javascript" src="js/jquery-2.1.1.min.js"></script-->  
 
     <!-- APLICATION -->
   <script>document.write('<base href="' + document.location + '" />');</script>
-  <script src="app.js"></script>  
-  <script src="controller/pessoaController.js"></script>
-  <script src="service/pessoaService.js"></script>
+  <script src="app.js"></script>    
   <script src="controller/questaoController.js"></script>
   <script src="service/questaoService.js"></script>  
    <script src="service/utilService.js"></script>  
@@ -34,18 +27,13 @@
   <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/apple-touch-icon-72-precomposed.png">
   <link rel="apple-touch-icon-precomposed" href="img/apple-touch-icon-57-precomposed.png">
   <link rel="shortcut icon" href="img/favicon.png">
-  
-	<!--script type="text/javascript" src="js/jquery.min.js"></script-->
-	<script type="text/javascript" src="js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="js/scripts.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/scripts.js"></script>
+
 </head>
 
-<!-- <body> -->
-
 <nav class="navbar navbar-default navbar-fixed-top navbar-inverse" role="navigation" ng-controller="utilController">
-	<ul class="nav nav-pills pills">		
-		<li><a href="#agenda" ng-click="limparMensagens()">Agenda</a></li>
-		<li><a href="#cadastro" ng-click="limparMensagens()">Cadastrar</a></li>		
+	<ul class="nav nav-pills pills">
 		<li><a href="#questoes" ng-click="limparMensagens()">Lista Questoes</a></li>
 		<li><a href="#questao" ng-click="limparMensagens()">Adicionar Questao </a></li>		
 	</ul>	
@@ -59,19 +47,16 @@
 				<div class="page-header">
 					<h1>GERENCIADOR DE QUESTOES <small>AngularJS</small></h1>
 				</div>
-				<div class="alert alert-dismissable alert-success" ng-show="msgIncluido">
+				<div class="alert alert-dismissable alert-success" ng-show="msgIncluido" >
 					</h4>Cadastro realizado com sucesso!!				 
 				</div>
 				<div class="alert alert-dismissable alert-warning" ng-show="msgExcluido">
 					</h4>Exclusao realizada com sucesso!!
 				</div>
 			</div>
-			<div class="jumbotron">
-			
-				<ng-view/>
-				
-			</div>
-		
+			<div class="jumbotron jumbotron-limit">				
+				<ng-view/>				
+			</div>		
 	</div>
 </div>
 

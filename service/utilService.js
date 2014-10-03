@@ -14,5 +14,9 @@ $app.service('utilService', function($http, $rootScope) {
 	$rootScope.msgExcluido = true;
 	$rootScope.msgIncluido = false;
   };
+
+  this.getToday = function(){
+    $rootScope.dataAtual = new Date();
+  };
   
 });

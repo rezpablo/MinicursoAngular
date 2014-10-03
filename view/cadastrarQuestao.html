@@ -1,18 +1,41 @@
-<div ng-controller="questaoController">
-	<form ng-submit="adicionarQuestao()">
+<!-- <div ng-controller="questaoController"> -->
+<div>
+	<form name="questaoForm" ng-submit="adicionarQuestao()">
 	  <div class="form-group">
-		<label>Pergunta</label>
-			<input type="text" class="form-control" ng-model="descricao">
-		<label>Alternativa 1</label>
-			<input type="text" class="form-control" ng-model="alternativa1">
-		<label>Alternativa 2</label>
-			<input type="text" class="form-control" ng-model="alternativa2">	
+
+		<label>Questao</label><span class="required" ng-show="questaoForm.perguta.$error.required">
+        *</span><br>
+		<textarea class="form-control text-input" name="perguta" ng-model="pergunta" ng-required="true"></textarea>
+	
+		<label>Alternativa 1</label><span class="required" ng-if="questaoForm.alternativa1.$error.required">
+        *</span><br>
+		<input type="text" class="imptext text-input" name="alternativa1" ng-model="alternativa1" ng-required="true" 
+		ng-init="focus=false;blur=false;active=false" 
+		ng-class="{ blue: blur && alternativa1, red: blur && !focus}" 
+		ng-focus="focus=true; blur=false;" ng-blur="blur=true;focus=false;">
+
+		<label>Alternativa 2</label><span class="required" ng-show="questaoForm.alternativa2.$error.maxlength">  Maximo 50 chars</span><br>
+		<input type="text" class="form-control text-input" name="alternativa2" placeholder="Maximo 50 chars" ng-model="alternativa2" ng-required="true" ng-maxlength="30">
+
 		<label>Alternativa 3</label>
-			<input type="text" class="form-control" ng-model="alternativa3">
+		<input type="text" class="form-control text-input" placeholder="Minimo 10 chars" ng-model="alternativa3" ng-required="true" ng-minlength="10">
+
 		<label>Alternativa 4</label>
-			<input type="text" class="form-control" ng-model="alternativa4">		 	
-		<input class="btn btn-default" type="submit" value="Incluir" />		 	
-		<a class="btn btn-ttc" ng-click="limparMensagens()" href="#/questoes" >Cancelar</a>
-	  </div>
+		<input type="text" class="form-control text-input" ng-model="alternativa4" ng-required="true" ng-class="{red: !alternativa4 && resposta}">
+			 <!-- questaoForm.$valid && !alternativa4 -->
+
+		<label>Alternativa correta</label>
+		<select class="form-control text-input" ng-model="resposta" ng-required="true" ng-class="{red: !resposta}">
+			<option value="alternativa1">Alternativa 1</option>
+			<option value="alternativa2">Alternativa 2</option>
+			<option value="alternativa3">Alternativa 3</option>
+			<option value="alternativa4">Alternativa 4</option>
+		</select>
+
+		<!--input ng-disabled="!(pergunta && alternativa1 && alternativa2 && alternativa3)"-->
+		<button class="btn btn-default" value="Incluir" ng-disabled="(questaoForm.$invalid)">Incluir</button>
+		
+		<a class="btn btn-ttc" href="#/questoes" ng-click="limparMensagens()">Cancelar</a>
+		</div>
 	</form>
 </div>
